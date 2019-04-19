@@ -88,7 +88,7 @@ class Rbac
         }
 
         return Db::name($this->permissionTable)
-            ->insert($data);
+            ->insertGetId($data);
     }
 
     /**
@@ -376,7 +376,7 @@ class Rbac
             throw new Exception('参数错误');
         }
 
-        return Db::name($this->userTable)->insert($data);
+        return Db::name($this->userTable)->insertGetId($data);
     }
 
     /**
