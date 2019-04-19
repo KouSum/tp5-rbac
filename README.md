@@ -165,7 +165,7 @@ $rbacObj->cachePermission(1);
 
 ```php
 $rbacObj = new Rbac();
-$rbacObj->can('/index/goods/list');
+$rbacObj->can(strtolower('/index/goods/list'));
 ```
 
 该方法是验证当前用户有没有操作/index/goods/list的权限，如果有则返回true如果无则返回false
